@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Population', 'Density(P/km^2)'],
+          ['Germany', 84099634, 240],
+          ['United States', 333316388, 36],
+          ['Brazil', 214364772, 25],
+          ['Canada', 38138784, 4],
+          ['France', 65444507, 119],
+          ['RU', 146008298, 9],
+          ['Turkey', 85430913, 110]
+        ]);
+        //creating a colored map according to population and it also give detail about density
+        var options = { backgroundColor: 'lightblue',           colorAxis: {colors: ['#388D01', '#C42100']},
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 1200px; height: 700px;"></div>
+  </body>
+</html>

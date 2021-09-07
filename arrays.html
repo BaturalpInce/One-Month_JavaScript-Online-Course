@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arrays</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	//push
+	var cities = ["İstanbul", "Ankara", "İzmir", "Eskişehir"];
+	var cities2 = ["Bursa","Isparta"];
+	var totalCities = cities.push("Adana"); //adding this to the end of array
+	console.log(cities);
+	console.log(totalCities) //
+
+	//Array.prototype.push.apply
+	Array.prototype.push.apply(cities, cities2); //merging two arrays
+	console.log(cities);
+
+	//pop
+	var languages = ["Turkish", "English", "Korean", "Swedish"];
+	var poppedLanguage = languages.pop(); //removes the last item of array
+	console.log(languages); //shows the remaining items after pop
+	console.log(poppedLanguage); //shows the language that we popped
+
+	//shift
+	var languages = ["Turkish", "English", "Korean", "Swedish"];
+	var shiftedLanguage = languages.shift(); //removes the first item of array
+	console.log(languages); //shows the remaining items after shift
+	console.log(shiftedLanguage); //shows the language that we shifted
+
+	//reverse
+	var myArray = ["1", "2", "3"];
+	myArray.reverse(); 
+	console.log(myArray)
+
+
+
+	</script>
+</body>
+</html>

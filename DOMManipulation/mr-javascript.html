@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+	</head>
+
+<body>
+
+	<h1 id="mr-javascript" class="hello">I'm Mr. JavaScript</h1>
+	<a href="#" id="anchor" class="greet">Hey JavaScript, how ya feeling?</a>
+	<a href="#" id="mr-javascript" class="greet">Random</a>
+	<a href="#" id="reset">Reset All</a>
+	<h1 id="empty"></h1>
+
+
+	<script type="text/javascript">
+	//console.log("We good?");
+
+	var h1 = document.querySelector("h1");
+	h1.innerHTML = "I'm good!";
+	console.log(h1);
+
+	var a = document.querySelector("a");
+	a.addEventListener('click',function(){
+	//alert("this section will execute when clicked!")
+	var h1 = document.querySelector("h1");
+	h1.innerHTML = "I'm alive!";
+	console.log(h1);
+	});
+
+	//can do the same thing that we did in lines 21-27 with the lines 30-35
+	//var anchor = document.getElementById('anchor');
+	//anchor.addEventListener('click',function(){
+	//var name = document.getElementById('mr-javascript');
+	//console.log(name);
+	//name.innerHTML = "Not good bah!";
+	//});
+
+	var b = document.querySelector(".hello");
+	console.log(a) //this will print h1 at line 11 on console
+
+	var c = document.getElementsByClassName("greet");
+	console.log(c[0]);
+	console.log(c[1]);
+
+
+	c[1].addEventListener('click',function(){
+	//alert("this section will execute when clicked!")
+	var h2 = document.querySelector("#empty");
+	h2.innerHTML = "1234567890!";
+	console.log(h2);
+	});
+
+	var reset = document.getElementById("reset");
+	reset.addEventListener('click',function(){
+
+	var h1 = document.querySelector("h1");
+	h1.innerHTML = "Hey JavaScript, how ya feeling?";
+	console.log(h1);
+	var h2 = document.querySelector("#empty");
+	h2.innerHTML = "";
+	});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<title>Functions</title>
+	<script type="text/javascript">
+
+		//basic function
+		function catSound(){
+			console.log("meoww meoww");
+		}
+		catSound();
+
+		//anonymous function
+		var dogSound = function(){
+			console.log("row row")
+		}; 
+		dogSound();
+		
+		//creating an object
+		var flight = {
+			airline: "Turkish Airlines",
+			plane: "Boeing 737",
+			number: "141",
+			departure: {
+				time: "16.00",
+				date: "03-03-2020",
+				from: "Istanbul",
+				to: "New York"
+			}
+		}
+		console.log(flight.airline);
+		console.log(flight.plane);
+		console.log(flight.departure);
+		console.log(flight.departure.time);
+		console.log(flight.departure.to);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
